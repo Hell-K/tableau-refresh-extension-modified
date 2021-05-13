@@ -1,0 +1,13 @@
+<div class="product-links">
+  <div class="content-container">
+    {{#each links}}
+    <a href="{{ url }}" class="product-links__link">
+      <div class="product-links__text-wrap">
+        <h5 class="product-links__title">{{ title }}</h5>
+        <p class="product-links__description">{{ description }}</p>
+        <p class="product-links__cta">{{ cta }}</p>
+      </div>
+    </a>
+    {{/each}}
+  </div>
+</div>

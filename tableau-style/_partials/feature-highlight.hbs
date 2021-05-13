@@ -1,0 +1,31 @@
+<div class="feature-highlight {{ modifier_class }}" {{#if reveal}} id="{{ reveal.curtainId }}"{{/if}}>
+  <div class="feature-highlight__image">
+    {{#if link}}
+      <div class="thumbnail {{ thumbnail.modifier_class }}">
+        <a href="{{ link.href }}" {{#if link.class}}class="{{ link.class }}"{{/if}} {{#if link.dataAttrs}} {{{attrs link.dataAttrs}}}{{/if}}>
+          <img src="{{ thumbnail.src }}" alt="{{ thumbnail.alt }}" />
+        </a>
+      </div>
+    {{else}}
+      <img src="{{ thumbnail.src }}" alt="{{ thumbnail.alt }}" />
+    {{/if}}
+  </div>
+
+  <div class="feature-highlight__copy">
+    {{#if heading}}
+      <h3 class="heading-highlight">{{{ heading }}}</h3>
+    {{/if}}
+
+    {{#if copy}}
+      {{{ copy }}}
+    {{/if}}
+
+    {{#with link}}
+      {{> link-formatted}}
+    {{/with}}
+  </div>
+</div>
+
+{{#with reveal}}
+  {{> reveal-helper}}
+{{/with}}

@@ -1,0 +1,32 @@
+<section class="hero {{ modifier_class }}">
+  <div id="{{ curtainId }}">
+    <div class="hero__content" {{#if background}}style="background-image: url({{ background }});"{{/if}}>
+      <div class="hero__content-inner {{ container }}">
+        {{#if eyebrow}}
+          <p class="hero__eyebrow">
+            {{{ eyebrow }}}
+          </p>
+        {{/if}}
+        {{#if title}}
+          <h1 class="hero__title">
+            {{{ title }}}
+          </h1>
+        {{/if}}
+        {{#if subtitle}}
+          <h5 class="hero__subtitle">
+            {{{ subtitle }}}
+          </h5>
+        {{/if}}
+        {{#if content}}
+          <div class="hero__extra-content">
+            {{{ content }}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  {{#with reveal}}
+    {{> reveal-helper}}
+  {{/with}}
+</section>

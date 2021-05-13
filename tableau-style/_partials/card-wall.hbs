@@ -1,0 +1,7 @@
+<div class="card-wall {{ modifier_class }} clearfix" data-masonry='{"itemSelector":".card-wall .card","columnWidth":".card-wall .card:not(.card--wide)","percentPosition":true,"gutter":".card-wall__gutter-sizer","resize":false}'>
+  {{#each cards}}
+    {{> card}}
+  {{/each}}
+
+  <div class="card-wall__gutter-sizer"></div>
+</div>

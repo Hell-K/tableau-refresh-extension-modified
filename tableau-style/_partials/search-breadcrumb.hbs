@@ -1,0 +1,19 @@
+<div class="search-breadcrumb {{ modifier_class }}">
+  <div class="search-breadcrumb__items">
+  {{#each items}}
+    <div class="search-breadcrumb__item">
+      <div class="search-breadcrumb__item-title">{{ title }}:</div>
+      <div class="search-breadcrumb__item-values">
+      {{#each values}}
+        <div class="search-breadcrumb__item-value">
+          <div class="search-breadcrumb__item-caption">{{ text }}</div><div class="search-breadcrumb__item-clear"></div>
+        </div>
+      {{/each}}
+      </div>
+    </div>
+  {{/each}}
+  </div>
+  <div class="search-breadcrumb__controls">
+    <div class="search-breadcrumb__clear-all">Clear All</div>
+  </div>
+</div>

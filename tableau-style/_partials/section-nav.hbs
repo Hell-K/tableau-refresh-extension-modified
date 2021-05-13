@@ -1,0 +1,19 @@
+<div class="section-nav">
+  <h5 class="section-nav__title">{{ title }}</h5>
+  <ul class="section-nav__menu">
+    {{#each links}}
+      <li class="section-nav__primary">
+        <a class="section-nav__primary-link {{#if active}}active{{/if}}" href="{{ url }}">{{ title }}</a>
+        {{#if children}}
+          <ul class="section-nav__secondary">
+            {{#each children}}
+              <li>
+                <a class="section-nav__secondary-link {{#if active}}active{{/if}}" href="{{ url }}">{{ title }}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

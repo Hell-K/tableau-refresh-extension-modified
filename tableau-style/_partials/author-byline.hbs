@@ -1,0 +1,34 @@
+<div class="author-byline {{ modifier_class }}" itemtype="https://schema.org/Blog">
+  {{#if author.avatar}}
+    <div class="author-byline__avatar">
+      {{#if author.profileUrl}}
+        <a href="{{ author.profileUrl }}"><img src="{{ author.avatar }}" alt="{{ author.name }}"></a>
+      {{else}}
+        <img src="{{ author.avatar }}" alt="{{ author.name }}">
+      {{/if}}
+    </div>
+  {{/if}}
+  <div class="author-byline__text">
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+      {{#if author.name}}
+        <div class="author-byline__detail" itemprop="name">
+          {{#if author.profileUrl}}
+            <a href="{{ author.profileUrl }}">{{ author.name }}</a>
+          {{else}}
+            {{ author.name }}
+          {{/if}}
+        </div>
+      {{/if}}
+      {{#if author.jobTitle}}
+        <div class="author-byline__detail" itemprop="jobTitle">
+          {{ author.jobTitle }}
+        </div>
+      {{/if}}
+    </div>
+    {{#if publishDate}}
+      <div class="author-byline__detail" itemprop="dateCreated">
+        {{ publishDate }}
+      </div>
+    {{/if}}
+  </div>
+</div>

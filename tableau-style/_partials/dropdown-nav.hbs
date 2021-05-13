@@ -1,0 +1,20 @@
+<nav class="dropdown-nav {{ modifier_class }}">
+
+  <div class="dropdown-nav__toggle"{{#if toggle_data_attributes}} {{{attrs toggle_data_attributes}}}{{/if}}>
+    <i class="dropdown-nav__icon icon {{ icon_class }}"></i>
+    <span class="dropdown-nav__title">{{{ title }}}</span>
+  </div>
+
+  <div class="dropdown-nav__body">
+    {{#each menus}}
+      <h5 class="dropdown-nav__menu-heading">{{ title }}</h5>
+      <ul class="dropdown-nav__menu {{#if @last}}dropdown-nav__menu--last{{/if}}">
+        {{#each items}}
+          <li class="dropdown-nav__menu-item">
+            <a class="dropdown-nav__menu-link" href="{{#if href}}{{ href }}{{else}}#{{/if}}">{{ text }}</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+</nav>

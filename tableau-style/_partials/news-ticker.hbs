@@ -1,0 +1,7 @@
+<div class="news-ticker">
+  {{#each items}}
+    <div class="news-ticker__item">
+      <strong>{{ label }}:</strong> {{{ description }}} <a href="{{ link.url }}">{{ link.text }}</a>
+    </div>
+  {{/each}}
+</div>

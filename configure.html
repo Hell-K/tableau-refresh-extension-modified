@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper page width and zoom level on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./tableau-style/vendor/slick.js/slick/slick.css" media="all" />
+    <link rel="stylesheet" href="./tableau-style/css/style.min.css" media="all" />
+    <link rel="stylesheet" href="./vendor/spectrum/spectrum.css" media="all" />
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <title>Help - Tableau Usage Tracker by Starschema - Tableau Desktop Extension for anonymized user behaviour tracking</title>
+
+    <style type="text/css">
+      .form__field input.form__control.has-change { border-color: green; background-color: #dfd; color: green; }
+
+      .form__field .help-text { font-size: 0.8em; font-family: "Benton Sans Book"; color: #aaa; }
+      .form__field input.color-input { height: 3em; }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="clearfix">
+      <div class="grid--9">
+        <h4>Starschema Auto-Refresh</h4>
+        <h6>
+          This extension regularly refreshes Data Sources on the dashboard while viewing.
+        </h6>
+      </div>
+
+      <div class="grid--3 text--right">
+        <a href="#" class="link--close link" id="closeButton">Done</a>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="form form--centered">
+      <div class="fields">
+
+        <div class="form__field form-field">
+          <label class="form-field__label" for="refreshInterval">Refresh interval (seconds)</label>
+          <input class="form__control form-field__control" type="number" min="1" max="3600" name="refreshInterval" id="refreshInterval" placeholder="seconds" data-send="true" value="30">
+
+          <div class="form__intro-description help-text">
+            How often should the data be refreshed?
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Font and radius -->
+    <div class="clearfix">
+
+      <div class="grid--4" style="display:none">
+        <div class="form form--centered">
+          <div class="form__field form-field">
+            <label class="form-field__label" for="radiusInput">Font</label>
+            <select id="" name="fontInput" data-config="fontFamily">
+              <option value='Benton Sans Thin'>Benton Sans Thin (Tableau)</option>
+              <option value='Benton Sans Book'>Benton Sans Book (Tableau)</option>
+              <option value="sans-serif" selected="selected">Sans</option>
+              <option value="serif">serif</option>
+            </select>
+
+            <div class="form__intro-description help-text">
+              Font used to display the counter
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FONT SIZE -->
+      <div class="grid--4">
+        <div class="form form--centered">
+          <div class="form__field form-field">
+            <label class="form-field__label" for="fontSizeInput">FontSize</label>
+            <input class="form__control form-field__control" type="number" min="10" max="100" name="fontSize" id="fontSizeInput" placeholder="pixels" data-config="fontSize" data-default-value="30" value="30">
+
+            <div class="form__intro-description help-text">
+              FontSize in pixels.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="grid--4" style="display:none">
+      <div class="form form--centered">
+        <div class="form__field form-field">
+          <label class="form-field__label" for="radiusInput">Radius</label>
+          <input class="form__control form-field__control" type="number" min="10" max="100" name="radius" id="radiusInput" placeholder="pixels" data-config="radius" data-default-value="30" value="30">
+
+          <div class="form__intro-description help-text">
+            Radius of the arc in pixels.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div class="clearfix">
+
+      <div class="grid--4" style="display:none">
+        <div class="form form--centered">
+          <div class="form__field form-field">
+            <label class="form-field__label" for="fontColorInput">Text Color</label>
+            <input class="form__control form-field__control color-input" type="color" name="fontColor" id="fontColorInput" placeholder="CSS color" data-config="fontColor" value="#ffffff" data-default-value="#ffffff" >
+
+            <div class="form__intro-description help-text">
+              Color of the text
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- FILL COLOUR -->
+      <div class="grid--4" style="display:none">
+        <div class="form form--centered">
+          <div class="form__field form-field">
+            <label class="form-field__label" for="fillColorInput">Fill Color</label>
+            <input class="form__control form-field__control color-input" type="color" name="fillColor" id="fillColorInput" placeholder="CSS color" data-config="fillStyle" value="#8ac575" data-default-value="#8ac575">
+
+            <div class="form__intro-description help-text">
+              Color of the background
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STROKE COLOUR -->
+      <div class="grid--4" style="display:none">
+        <div class="form form--centered">
+          <div class="form__field form-field">
+            <label class="form-field__label" for="fontColorInput">Stroke Color</label>
+            <input class="form__control form-field__control color-input" type="color" name="strokeColor" id="strokeColorInput" placeholder="CSS color" data-config="strokeStyle" value="#477050" data-default-value="#477050">
+
+            <div class="form__intro-description help-text">
+              Color of the outline
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="./tableau-style/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./tableau-style/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./tableau-style/js/vendor.js"></script>
+    <script src="./tableau-style/js/scripts.min.js"></script>
+		<script src="./tableau-extensions-1.latest.min.js"></script>
+    <script src="./vendor/spectrum/spectrum.js"></script>
+    <script src="./configure.js"></script>
+    <!-- Library to allow saving of TREX files generated on the fly -->
+  </body>
+</html>

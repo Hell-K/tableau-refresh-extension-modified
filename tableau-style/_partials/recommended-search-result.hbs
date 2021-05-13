@@ -1,0 +1,21 @@
+<div class="recommended-search-result {{ modifier_class }}">
+
+  <div class="recommended-search-result__image">
+    <img src="http://www.placecage.com/c/500/500">
+  </div>
+
+  <div class="recommended-search-result__body">
+    <div class="recommended-search-result__label label-tag label-tag--purple">Recommended</div>
+
+    <h3 class="recommended-search-result__title">{{{ title }}}</h3>
+
+    <div class="recommended-search-result__summary">
+      {{{ summary }}}
+    </div>
+
+    {{#with link}}
+    {{> link-base}}
+    {{/with}}
+  </div>
+
+</div>

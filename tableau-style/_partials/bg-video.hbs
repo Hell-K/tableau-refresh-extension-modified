@@ -1,0 +1,23 @@
+<div class="section background-video {{ modifier_class }}" style="background-image: url({{  background }});">
+  {{#with brightcove}}
+    <video class="background-video__video video-js" data-video-id="{{ id }}" data-account="{{ account }}" data-player="{{ player }}" data-embed="{{ embed }}" poster="{{ background }}" autoplay muted loop>
+    </video>
+    <script src="//players.brightcove.net/{{ account }}/{{ player }}_{{ embed }}/index.min.js"></script>
+  {{/with}}
+
+  {{#if video}}
+  <video class="background-video__video" poster="{{ background }}" autoplay muted loop>
+    <source src="{{ video }}" type="video/mp4">
+  </video>
+  {{/if}}
+
+  <div class="content-container text--negative">
+    <p>Per nostrud perferendis eget molestie nisl accusantium rem officia condimentum minus ligula ipsam labore fugit, phasellus consequatur? Mollis augue occaecat fringilla urna vitae augue morbi dapibus tenetur. Incididunt aliquip. Nibh modi occaecati, luctus placerat saepe quidem dolorum adipisci quos urna. Doloremque pulvinar, ipsa dictum excepteur, cillum etiam fames, itaque veritatis.</p>
+
+    <p>Vestibulum sodales exercitation necessitatibus magnis, hac eos imperdiet, illo assumenda a vitae id lorem! Accumsan tempor, habitasse, sapiente molestias modi, repudiandae irure porro class? Id leo. Viverra dictum hendrerit ac incididunt! Corporis vivamus aut blandit? Aliquid cupiditate facilis cum curabitur. Potenti possimus! Laboriosam repellendus dolor? Mollit scelerisque nec ac asperiores.</p>
+
+    <p>Veritatis, quibusdam? Ante dapibus temporibus, eveniet! Mollitia magnis. Pulvinar nisl aut eleifend, nulla erat maecenas, recusandae perspiciatis saepe. Repellendus quia, veniam omnis condimentum labore, proin libero odio, doloremque. Cumque! Morbi eiusmod adipiscing dolores consequat. Irure nibh orci augue netus voluptates. Aut nullam laboriosam nunc, donec nulla interdum congue! Veritatis quos.</p>
+
+    <p>Qui! Exercitationem mattis illo laboris nam est incidunt, pede nostra hic, lobortis, porro arcu venenatis culpa? Elit faucibus class facilisis. Dolorum! Repudiandae non aute quam natoque luctus magnam molestiae cillum, accusamus sociis, curabitur, magnam penatibus etiam adipiscing inventore culpa optio, etiam, egestas cubilia aperiam, anim viverra porro repellat, atque diam.</p>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<table class="{{ modifier_class }}">
+  <thead>
+    <tr>
+      {{#each headings}}
+        <th {{#if class}}class="{{ class }}" {{/if}}{{#if width}}width="{{ width }}"{{/if}}>{{{ text }}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each rows}}
+      <tr>
+        {{#each cells}}
+          <td>
+            {{#with content}}
+              {{{ this }}}
+            {{/with}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

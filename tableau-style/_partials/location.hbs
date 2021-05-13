@@ -1,0 +1,53 @@
+<div class="location">
+  {{#if use_long_format}}
+    <h5 class="location__general margin-bottom-none">
+      {{#if city}}<span class="location__comma">{{ city }}</span>{{/if}}
+    </h5>
+    <div class="location__general-label">
+      {{#if state_long}}
+        <span class="location__comma">{{ state_long }}</span>
+      {{/if}}
+      {{#if country_long}}
+        <span class="location__comma">{{ country_long }}</span>
+      {{/if}}
+    </div>
+  {{else}}
+    <h5 class="location__general">
+      {{#if city}}<span class="location__comma">{{ city }}</span>{{/if}}
+      {{#if state}}<span class="location__comma">{{ state }}</span>{{/if}}
+      {{#if country}}<span class="location__comma">{{ country }}</span>{{/if}}
+    </h5>
+  {{/if}}
+
+  {{#if mapImg}}
+  <img class="location__map-image" src={{ mapImg.src }} alt="{{ mapImg.alt }}" width="{{ mapImg.width }}" height="{{ mapImg.height }}">
+  {{/if}}
+  <div class="location__address">
+    {{!-- Prevent city/state/country when neither place nor address is present. --}}
+    {{#if place}}
+      <p><strong>{{ place }}</strong></p>
+      {{#if address}}
+        <p>{{{ address }}}</p>
+      {{/if}}
+      <p>
+        {{#if city}}<span class="location__comma">{{ city }}</span>{{/if}}
+        {{#if state}}<span class="location__comma">{{ state }}</span>{{/if}}
+        {{#if zip}} {{ zip }}{{/if}}
+      </p>
+    {{else}}
+      {{#if address}}
+        <p>{{{ address }}}</p>
+        <p>
+          {{#if city}}<span class="location__comma">{{ city }}</span>{{/if}}
+          {{#if state}}<span class="location__comma">{{ state }}</span>{{/if}}
+          {{#if zip}} {{ zip }}{{/if}}
+        </p>
+      {{/if}}
+    {{/if}}
+    <p>
+      {{#with mapLink}}
+        {{> link-base}}
+      {{/with}}
+    </p>
+  </div>
+</div>

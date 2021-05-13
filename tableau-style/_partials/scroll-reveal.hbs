@@ -1,0 +1,44 @@
+<div class="section">
+  <div class="content-container">
+    <div class="scroll-reveal {{ modifier_class }}">
+      <h2>Scroll Reveal Customization</h2>
+      <p>
+        Scroll Reveals can be used to liven up a page and make the content more engaging. The idea is to draw some attention to elements as they come on the page. This works great for bringing images onto the page ro revealing short content blurbs.
+      </p>
+      <p>
+        Scroll reveals can be tweaked and fine-tuned in markup by setting data attributes for all of the options that the <a href="https://github.com/jlmakes/scrollreveal#22-the-starting-defaults">Scroll Reveal plugin</a> supports. Refer to the plugin documentation for examples and descriptions. Here's some examples:
+      </p>
+    </div>
+
+    {{#each options}}
+      <p class="scroll-reveal {{ ../modifier_class }}" data-{{ option }}="{{ value }}">
+        <code>data-{{ option }}="{{ value }}"</code>
+      </p>
+    {{/each}}
+  </div>
+</div>
+
+<div class="section bg--light-gray-2">
+  <div class="content-container">
+    <div class="scroll-reveal {{ modifier_class }}">
+      <h2>Sequenced Scroll Reveal</h2>
+      <p>
+        Content can be revealed on the page in a sequence with an interval between subsequent reveals by wrapping the items in a <code>scroll-reveal__sequence-container</code> container and giving each revealing element a <code>scroll-reveal--sequenced</code> class. An optional <code>data-sequence-interval="200"</code> attribute on the sequence container will alter the interval between reveals within the container. If not set, this will default to 100ms. Additionally, a <code>data-sequence-delay="200"</code> attribute can be added to delay the start of the sequence. If not set, it defaults to 0.
+      </p>
+    </div>
+
+    <div class="scroll-reveal__sequence-container" data-sequence-interval="200">
+      <div class="clearfix">
+        <div class="scroll-reveal scroll-reveal--sequenced {{ modifier_class }} grid--4">
+          <img src="http://www.placecage.com/600/600">
+        </div>
+        <div class="scroll-reveal scroll-reveal--sequenced {{ modifier_class }} grid--4">
+          <img src="http://www.placecage.com/600/600">
+        </div>
+        <div class="scroll-reveal scroll-reveal--sequenced {{ modifier_class }} grid--4 grid--last">
+          <img src="http://www.placecage.com/600/600">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

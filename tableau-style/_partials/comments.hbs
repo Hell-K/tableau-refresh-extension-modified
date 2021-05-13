@@ -1,0 +1,28 @@
+<div class="comments">
+  {{#each comments}}
+    {{#if indented}}
+      <div class="comment--indented">
+    {{/if}}
+    <div class="comment">
+      {{#if new}}
+        <mark class="comment__new">new</mark>
+      {{/if}}
+      <div class="comment__info">
+        <p class="comment__submitted">
+          {{{ byline }}}
+        </p>
+      </div>
+
+      <div class="comment__content">
+        {{{ comment }}}
+      </div>
+
+      <ul class="comment__links">
+        <li><a href="{{ replyUrl }}">reply</a></li>
+      </ul>
+    </div>
+    {{#if indented}}
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

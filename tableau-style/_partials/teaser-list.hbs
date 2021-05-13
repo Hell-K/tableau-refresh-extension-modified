@@ -1,0 +1,11 @@
+<div class="clearfix" id="{{ curtainId }}">
+  {{#each items}}
+    {{> teaser-item}}
+  {{/each}}
+</div>
+
+{{#each items}}
+  {{#with reveal}}
+    {{> reveal-helper}}
+  {{/with}}
+{{/each}}

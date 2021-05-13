@@ -1,0 +1,24 @@
+<div class="cross-reference-1">
+  <div class="cross-reference-1__image">
+    <a href="{{ link.href }}">
+      {{#if image}}
+        <img src="{{ image.src }}" title="{{ image.alt }}">
+      {{/if}}
+      {{#if icon}}
+        <i class="icon icon--{{ icon }}"></i>
+      {{/if}}
+    </a>
+  </div>
+
+  <div class="cross-reference-1__copy">
+    {{#if title}}
+      <h5 class="cross-reference-1__title">{{ title }}</h5>
+    {{/if}}
+
+    {{#with link}}
+      <p class="cross-reference-1__link">
+        {{> link-formatted}}
+      </p>
+    {{/with}}
+  </div>
+</div>

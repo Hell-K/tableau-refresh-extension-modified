@@ -1,0 +1,63 @@
+<section class="hero-fixed-height {{ modifier_class }}">
+  <div id="{{ curtainId }}">
+
+    {{#if brightcoveId}}
+      <div class="hero-fixed-height__video">
+        <div class="hero-fixed-height__video-inner bg-cover" style="background-image: url({{ background }});">
+          <![if gt IE 8]>
+          <video data-video-id="{{ brightcoveId }}" data-account="{{ brightcoveAccount }}" data-player="{{ brightcovePlayer }}" data-embed="{{ brightcoveEmbed }}" class="video-js" poster="{{ background }}" loop autoplay>
+          </video>
+          <script src="//players.brightcove.net/{{ brightcoveAccount }}/{{ brightcovePlayer }}_{{ brightcoveEmbed }}/index.min.js"></script>
+          <![endif]>
+        </div>
+      </div>
+    {{else}}
+
+      {{#if video}}
+        <div class="hero-fixed-height__video">
+          <div class="hero-fixed-height__video-inner">
+            <video autoplay="" loop="">
+              <source src="{{ video }}" type="video/mp4">
+              <img src="{{ background }}">
+            </video>
+          </div>
+        </div>
+      {{/if}}
+
+    {{/if}}
+
+    {{#if background}}
+      <div class="hero-fixed-height__background">
+        <div class="hero-fixed-height__background-inner" style="background-image: url({{ background }});">
+        <!--[if lt IE 9]>
+          <img class="hero-fixed-height__background-fallback" src="{{ background }}">
+        <![endif]-->
+        </div>
+      </div>
+    {{/if}}
+
+    <div class="hero-fixed-height__content">
+      <div class="hero-fixed-height__content-inner {{ container }}">
+        {{#if eyebrow}}
+          <p class="hero-fixed-height__eyebrow">
+            {{{ eyebrow }}}
+          </p>
+        {{/if}}
+        {{#if title}}
+          <h1 class="hero-fixed-height__title">{{{ title }}}</h1>
+        {{/if}}
+        {{#if subtitle}}
+          <h5 class="hero-fixed-height__subtitle">{{{ subtitle }}}</h5>
+        {{/if}}
+        {{#if content}}
+          {{{ content }}}
+        {{/if}}
+      </div>
+    </div>
+
+  </div>
+
+  {{#with reveal}}
+    {{> reveal-helper}}
+  {{/with}}
+</section>

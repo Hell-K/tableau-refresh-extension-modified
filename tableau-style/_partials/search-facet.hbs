@@ -1,0 +1,11 @@
+<div class="search-facet coveo-facet-collapsed {{ modifier_class }}">
+  <div class="search-facet__header">{{ title }}</div>
+  <ul class="search-facet__list">
+  {{#each items}}
+    <li class="search-facet__item">
+      <input id="{{ id }}" type="checkbox" class="search-facet__checkbox" form="dummy-form">
+      <label for="{{ id }}">{{ text }}</label>
+    </li>
+  {{/each}}
+  </ul>
+</div>
